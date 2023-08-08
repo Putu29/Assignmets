@@ -36,18 +36,11 @@
 //     localStorage.setItem("data", JSON.stringify(myFormData));
 //   }
 // });
-
 const formDetails = document.getElementById("info");
 const render = document.getElementById("render");
-const getUI = document.getElementById("printUI");
-const fragment = document.createElement("div");
-const getvalue = localStorage.getItem("data");
-const value2 = JSON.parse(getvalue);
-fragment.className = "formData";
 
 formDetails.addEventListener("submit", function abc(event) {
   event.preventDefault();
-  console.log("yes clicked");
   let value = [];
   const getArray = localStorage.getItem("data");
   if (getArray !== null) {
@@ -64,35 +57,27 @@ formDetails.addEventListener("submit", function abc(event) {
   value.push(data);
   localStorage.setItem("data", JSON.stringify(value));
 
-  //render.innerHTML = JSON.stringify(value);
+  displayUI();
+  document.getElementById("name").value = "";
+  document.getElementById("age").value = "";
+});
 
-  for (let i = 0; i < value.length; i++) {
+function displayUI() {
+  render.innerHTML = "";
+  const getvalue = localStorage.getItem("data");
+  const value2 = JSON.parse(getvalue);
+  for (let i = 0; i < value2.length; i++) {
     render.innerHTML =
       render.innerHTML +
       `<div class="style">` +
       `<p class="title2">Item added to the list!</p>` +
       `<h4 class="title">` +
-      value[i].name +
+      value2[i].name +
       `</h4>` +
       `<h4 class="title">` +
-      value[i].age +
+      value2[i].age +
       `</h4>` +
       `</div>`;
   }
-
-  document.getElementById("name").value = "";
-  document.getElementById("age").value = "";
-});
-
-for (let i = 0; i < value2.length; i++) {
-  getUI.innerHTML =
-    getUI.innerHTML +
-    `<div class="style">` +
-    `<h4 class="title">` +
-    value2[i].name +
-    `</h4>` +
-    `<h4 class="title">` +
-    value2[i].age +
-    `</h4>` +
-    `</div>`;
 }
+displayUI();
