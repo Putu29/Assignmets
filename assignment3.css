@@ -1,0 +1,95 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+.main_page {
+  margin: 0px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(148, 218, 107);
+}
+
+.h3 {
+  margin-left: 90px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.image-class {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
+}
+.trackname {
+  font-size: 40px;
+  margin-left: 65px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.trackartist {
+  margin: 0px;
+  font-size: 20px;
+  margin-left: 120px;
+  margin-bottom: 8px;
+}
+
+.audio-player {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  background: none;
+  border: 20px;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+h5 {
+  border: 20px;
+  margin: 20px;
+}
+
+.play-pause {
+  font-size: 20px;
+  background-color: black;
+  color: rgb(148, 218, 107);
+  padding: 10px;
+  border-radius: 35px;
+}
+
+input {
+  background-color: rgb(148, 218, 107);
+  margin: 0px;
+  padding: 0px;
+}
+
+.track-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-slider::-moz-range-track {
+  width: 100%;
+  background-color: black;
+}
+.volume-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume-slider::-moz-range-track {
+  width: 100%;
+  background-color: black;
+}
+button:hover {
+  color: white;
+}

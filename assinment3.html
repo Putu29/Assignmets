@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASSIGNMENT3</title>
+    <link href="assignment3.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- MAIN CLASS -->
+    <div class="main_page">
+      <div>
+        <h3 class="h3">PLAYING x OF y</h3>
+        <img class="image-class" src="music_icon.jpg" alt="music_icon" />
+        <p class="trackname">Track Name</p>
+        <p class="trackartist">Track Artist</p>
+        <!-- PLAY PAUSE DIV -->
+        <div class="audio-player">
+          <button class="backward">|◄</button>
+          <button class="play-pause">►</button>
+          <button class="forward">►|</button>
+        </div>
+        <!-- TRACK SLIDER DIV -->
+        <div class="track-progress">
+          <h5>0:00</h5>
+          <input class="track-slider" type="range" />
+          <h5>0:00</h5>
+        </div>
+        <!-- VOLUME DIV -->
+        <div class="volume-control">
+          <button class="volume-decrease">🔉-</button>
+          <input
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+          />
+          <button class="volume-increase">🔉+</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assignment3.js"></script>
+</html>
